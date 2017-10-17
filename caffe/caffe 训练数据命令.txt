@@ -1,0 +1,5 @@
+命令行运行./build/tools/caffe train --solver=examples/myself/myself_solver.prototxt
+如果对计算时间感兴趣，还可以运行./build/tools/caffe time --model=examples/myself//train_val.prototxt
+如果断电，由于snapshots里存储中间结果（参数和历史），我们可以使用如下命令从snapshots里回复训练：
+./build/tools/caffe train --solver=examples/myself/solver.prototxt
+--snapshot=examples/myself/caffenet_train_iter_10000.solverstate
